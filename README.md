@@ -29,8 +29,9 @@ The OpenCV code was written by the author, most of the TensorFlow code has been 
 
 ### Results of Kerneler:
 
-- Laplacian Kernel
-- Large Bluring
-- Small Bluring
-- Sobel X
-- Sobel Y
+- ![Laplacian Kernel](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg)
+- ![Large Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg)
+- ![Small Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg)
+- ![Sharpen](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg)
+- ![Sobel X](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg)
+- ![Sobel Y](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg)
