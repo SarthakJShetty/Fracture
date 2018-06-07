@@ -31,11 +31,17 @@ The OpenCV code was written by the author, most of the TensorFlow code has been 
 
 - **Laplacian Kernel:** 
 
-![Laplacian Kernel](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg)
+<p align="center">
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg"
+alt="Laplacian Kerneling results"/>
+</p>
 
 - **Large Bluring:** 
 
-![Large Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg)
+<p align="center">
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg"
+alt="Large Blurring results"/>
+</p>
 
 - **Small Bluring:** 
 
@@ -46,12 +52,21 @@ alt="Small Bluring results"/>
 
 - **Sharpen:** 	
 
-![Sharpen](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg)
+<p align="center">
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg"
+alt="Sharpen Kerneling results"/>
+</p>
 
 - **Sobel X:** 
 
-![Sobel X](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg)
+<p align="center">
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg"
+alt="Sobel X Kerneling results"/>
+</p>
 
 - **Sobel Y:** 
 
-![Sobel Y](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg)
+<p align="center">
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg"
+alt="Sobel Y Kerneling results"/>
+</p>
