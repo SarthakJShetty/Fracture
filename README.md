@@ -29,9 +29,15 @@ The OpenCV code was written by the author, most of the TensorFlow code has been 
 
 ### Results of Kerneler:
 
-- **Laplacian Kernel** ![Laplacian Kernel](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg)
-- **Large Bluring** ![Large Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg)
-- **Small Bluring** ![Small Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg)
-- **Sharpen** ![Sharpen](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg)
-- **Sobel X** ![Sobel X](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg)
-- **Sobel Y** ![Sobel Y](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg)
+- **Laplacian Kernel:** 
+![Laplacian Kernel](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg)
+- **Large Bluring:** 
+![Large Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg)
+- **Small Bluring:** 
+![Small Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg)
+- **Sharpen:** 
+![Sharpen](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg)
+- **Sobel X:** 
+![Sobel X](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg)
+- **Sobel Y:** 
+![Sobel Y](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg)
