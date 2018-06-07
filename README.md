@@ -38,8 +38,10 @@ The OpenCV code was written by the author, most of the TensorFlow code has been 
 ![Large Bluring](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg)
 
 - **Small Bluring:** 
+
 <p align="center">
-<"https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg/"/>
+<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg"
+alt="Small Bluring results"/>
 </p>
 
 - **Sharpen:** 	
