@@ -23,7 +23,7 @@ The OpenCV code was written by the author, most of the TensorFlow code has been 
 
 3. The image is then passed to the label_image.py [script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/label_image.py), which predicts whether the object is classified as fractured or not.
 
-4. A retrain.py[script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
+4. A retrain.py [script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
 
 5. A webscraper has been developed which scrapes Google Images for the images to build your dataset (yet to be developed).
 
