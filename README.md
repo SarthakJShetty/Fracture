@@ -20,7 +20,7 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 
 	<strong>Usage:</strong> ```python webscraper --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
 
-	<strong>Note: Make sure that both categories of images are in a common directory.</strong>
+	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
