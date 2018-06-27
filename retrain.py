@@ -1268,7 +1268,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--output_labels',
       type=str,
-      default='/tmp/output_labels.txt',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'/output_labels.txt',
       help='Where to save the trained graph\'s labels.'
   )
   parser.add_argument(
