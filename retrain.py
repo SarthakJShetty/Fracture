@@ -1229,6 +1229,14 @@ def main(_):
 
 
 if __name__ == '__main__':
+  pre_parser=argparse.ArgumentParser()
+  pre_parser.add_argument(
+    '--path_to_files',
+    type=str,
+    default='',
+    help='Path of everything.'
+    )
+  PRE_FLAGS, unparsed=pre_parser.parse_known_args()
   parser = argparse.ArgumentParser()
   parser.add_argument(
       '--image_dir',
@@ -1239,13 +1247,13 @@ if __name__ == '__main__':
   parser.add_argument(
       '--output_graph',
       type=str,
-      default='/tmp/output_graph.pb',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'/output_graph.pb',
       help='Where to save the trained graph.'
   )
   parser.add_argument(
       '--intermediate_output_graphs_dir',
       type=str,
-      default='/tmp/intermediate_graph/',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'intermediate_graph/',
       help='Where to save the intermediate graphs.'
   )
   parser.add_argument(
@@ -1266,7 +1274,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--summaries_dir',
       type=str,
-      default='/tmp/retrain_logs',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'/retrain_logs',
       help='Where to save summary logs for TensorBoard.'
   )
   parser.add_argument(
@@ -1350,7 +1358,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--bottleneck_dir',
       type=str,
-      default='/tmp/bottleneck',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'/bottleneck',
       help='Path to cache bottleneck layer values as files.'
   )
   parser.add_argument(
@@ -1413,7 +1421,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--saved_model_dir',
       type=str,
-      default='/tmp/saved_models/1/',
+      default='/tmp/'+PRE_FLAGS.path_to_files+'/saved_models/1/',
       help='Where to save the exported graph.')
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)

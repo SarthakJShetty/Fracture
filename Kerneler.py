@@ -23,8 +23,9 @@ def convolve(image, kernel):
 	output=(output*255).astype("uint8")
 	return output
 
-def run_kerneler():
-	print("Hello! You have entered the Kerneler")
+def run_kerneler(image):
+	print("[INFO]You have entered the Kerneler\n")
+
 #Standard argument parser intro'd here, takes into consideration two images, that have to be compared
 	'''ap=argparse.ArgumentParser()
 	ap.add_argument("-i","--Image_Insert",required=True,help="Add the path to the first image")
@@ -70,7 +71,7 @@ def run_kerneler():
 	("Sharpen",sharpen))
 
 #Adding first image here
-	image_1=cv2.imread('Gear.jpg')
+	image_1=cv2.imread(image)
 
 #Resizing the image maintaining the same aspect ratio
 	image_1=cv2.resize(image_1,(0,0),fx=.5,fy=.5)
@@ -88,16 +89,14 @@ def run_kerneler():
 	for(kernelName,kernel) in kernelBank:
 		print("[INFO] applying {} kernel".format(kernelName))
 		convolveOutput=convolve(gray_1,kernel)
-		cv2.imwrite(kernelName +".jpg", convolveOutput)
+		cv2.imwrite('Results/'+kernelName +".jpg", convolveOutput)
 		opencvOutput=cv2.filter2D(gray_1,-1,kernel)
 
 	#No need to call difference image here
 		(score)=compare_ssim(convolveOutput,opencvOutput,full=True)
-		print("Score for {} kernel is: {:.4f}\n".format(kernelName,score[0]))
+		print("[INFO]Score for {} kernel is: {:.4f}\n".format(kernelName,score[0]))
 	#cv2.imshow("original",gray_1)
 		cv2.imshow("{}-convolve".format(kernelName),convolveOutput)
 		cv2.imshow("{}-opencv".format(kernelName),opencvOutput)
 		cv2.waitKey(0)
 		cv2.destroyAllWindows()
-
-run_kerneler()
