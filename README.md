@@ -1,3 +1,4 @@
+
 # Fracture-Detection
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
@@ -17,13 +18,13 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 
 2. Using the webscraper, scrape images from Google Images to build your dataset.
 
-	Usage ```python webscraper --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
+	<strong>Usage:</strong> ```python webscraper --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
 
 	<strong>Note: Make sure that both categories of images are in a common directory.</strong>
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
-	Usage ```python retrain.py --image_dir path/to/dataset/directory --path="project_name"```
+	<strong>Usage:</strong> ```python retrain.py --image_dir path/to/dataset/directory --path="project_name"```
 
 	<strong>Note: the ```path``` creates a new file ```project_name``` under the ```tmp``` folder, and stores retrain logs, bottlenecks, checkpoints for the project here.</strong>
 
@@ -31,7 +32,7 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 
 5. We can now use ```label_image.py``` to identify the whether the given component is defective or not. 
 
-	Usage: ```python label_image.py --graph=path/of/tmp/file/genrated/output_graph.pb --labels=path/of/tmp/file/project_name/genrated/labels.txt --output_layer=final_result```
+	<strong>Usage:</strong> ```python label_image.py --graph=path/of/tmp/file/genrated/output_graph.pb --labels=path/of/tmp/file/project_name/genrated/labels.txt --output_layer=final_result```
 
 6. The above step triggers the ```VideoCapture()``` function, which displays the camera feed. Once the specimen is in position, press the Q button on the keyboard, the script will retain the latest frame and pass it onto the ```label_image.py``` and ```Kerneler.py``` programs.
 
