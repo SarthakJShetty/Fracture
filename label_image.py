@@ -21,6 +21,7 @@ import argparse
 import numpy as np
 import tensorflow as tf
 import cv2
+import os
 
 def load_graph(model_file):
   graph = tf.Graph()
@@ -95,10 +96,26 @@ if __name__ == "__main__":
   parser.add_argument("--output_layer", help="name of output layer")
   args = parser.parse_args()
 
-  cap=cv2.VideoCapture(0)
-  ret,frame=cap.read()
-  cv2.imwrite("frame.jpg",file_name)
-  file_name=frame+'jpg'
+  if args.image:
+    file_name=args.image
+
+  else:
+    cap = cv2.VideoCapture(0)
+    while(True):
+    # Capture frame-by-frame
+      ret, frame = cap.read()
+
+    # Display the resulting frame
+      cv2.imshow('frame',frame)
+      cv2.imwrite('Frame.jpg',frame)
+      if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# When everything done, release the capture
+    cap.release()
+    cv2.destroyAllWindows()
+    file_name='frame.jpg'
+
   if args.graph:
     model_file = args.graph
   if args.image:
@@ -143,5 +160,5 @@ if __name__ == "__main__":
     #print(results[i],top_k[i],len(top_k))
     print("[INFO]Probability that the given image is a "+str(labels[i])+" is: "+str(results[i]))
   print("[INFO]The given component is a: "+str(labels[np.argmax(results)]))
-  
+
 run_kerneler(file_name)
