@@ -26,7 +26,7 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 
 	<strong>Usage:</strong> ```python retrain.py --image_dir path/to/dataset/directory --path="project_name"```
 
-	<strong>Note: the ```path``` creates a new file ```project_name``` under the ```tmp``` folder, and stores retrain logs, bottlenecks, checkpoints for the project here.</strong>
+	<strong>Note:</strong> The ```path``` creates a new file ```project_name``` under the ```tmp``` folder, and stores retrain logs, bottlenecks, checkpoints for the project here.</strong>
 
 4. The previous step will cause logs and graphs to be generated during the training, and will take up a generous amount of space. We require the labels, bottlenecks and output graphs generated for the ```label_image.py``` script.
 
