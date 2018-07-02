@@ -3,12 +3,11 @@
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
 ### Introduction
-- This project aims to develop a tool for identifying fractures and fissures in a mechanical componenet.
+- This project aims to develop a tool for identifying fractures and fissures in a mechanical component.
 
 - The tool makes use of OpenCV and TensorFlow. OpenCV is used to visually detect the presence of the fracture and TensorFlow is used to predict the presence of fractures.
 
-#### Note:
-Most of the TensorFlow code has been pulled from the TensorFlow repository sans a few changes.
+	 <strong>Note:</strong> Most of the TensorFlow code has been pulled from the TensorFlow repository sans a few changes.
 
 #### Usage:
 
@@ -21,6 +20,8 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 	<strong>Usage:</strong> ```python webscraper --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
 
 	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
+
+	<strong>Credits: This scraper was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
@@ -53,6 +54,10 @@ Most of the TensorFlow code has been pulled from the TensorFlow repository sans 
 4. A retrain.py [script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
 
 5. A webscraper has been developed which scrapes Google Images for the images to build your dataset (yet to be developed).
+
+### Screenshots:
+
+
 
 ### Results of Kerneler:
 
