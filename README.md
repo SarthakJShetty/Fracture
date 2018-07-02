@@ -21,7 +21,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
 
-	<strong>Credits: This scraper was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
+	<strong>Credits: This <a title="Webscraper" href="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/webscraper.py">webcraper</a> was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
