@@ -1,14 +1,14 @@
 # Fracture-Detection
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
+### :warning: Code is buggy :warning:
+
 ### Introduction
 - This project aims to develop a tool for identifying fractures and fissures in a mechanical component.
 
 - The tool makes use of OpenCV and TensorFlow. OpenCV is used to visually detect the presence of the fracture and TensorFlow is used to predict the presence of fractures.
 
 	 <strong>Note:</strong> Most of the TensorFlow code has been pulled from the TensorFlow repository sans a few changes.
-
-### :warning: Code is buggy :warning:
 
 #### Usage:
 
