@@ -22,7 +22,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
 
-	<strong>Credits: This <a title="Webscraper" href="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/webscraper.py">webcraper</a> was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
+	<strong>Credits: This <a title="Webscraper" href="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/webscraper.py">webscraper</a> was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
@@ -34,7 +34,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 5. We can now use ```label_image.py``` to identify the whether the given component is defective or not. 
 
-	<strong>Usage:</strong> ```python label_image.py --graph=path/of/tmp/file/genrated/output_graph.pb --labels=path/of/tmp/file/project_name/genrated/labels.txt --output_layer=final_result```
+	<strong>Usage:</strong> ```python label_image.py --graph=path/of/tmp/file/generated/output_graph.pb --labels=path/of/tmp/file/project_name/generated/labels.txt --output_layer=final_result```
 
 6. The above step triggers the ```VideoCapture()``` function, which displays the camera feed. Once the specimen is in position, press the Q button on the keyboard, the script will retain the latest frame and pass it onto the ```label_image.py``` and ```Kerneler.py``` programs.
 
@@ -65,41 +65,23 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 - **Laplacian Kernel:** 
 
 <p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Laplacian.jpg"
-alt="Laplacian Kerneling results"/>
-</p>
-
-- **Large Bluring:** 
-
-<p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Large%20Bluring.jpg"
-alt="Large Blurring results"/>
-</p>
-
-- **Small Bluring:** 
-
-<p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Small%20Bluring.jpg"
-alt="Small Bluring results"/>
+<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Laplacian_Gray.jpg"/>
 </p>
 
 - **Sharpen:** 	
 
 <p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sharpen.jpg"
-alt="Sharpen Kerneling results"/>
+<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sharpen_Gray.jpg"/>
 </p>
 
 - **Sobel X:** 
 
 <p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20X.jpg"
-alt="Sobel X Kerneling results"/>
+<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20X_Gray.jpg"/>
 </p>
 
 - **Sobel Y:** 
 
 <p align="center">
-<img src="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/Results/Sobel%20Y.jpg"
-alt="Sobel Y Kerneling results"/>
+<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20Y_Gray.jpg"/>
 </p>
