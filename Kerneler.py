@@ -69,16 +69,18 @@ def run_kerneler(image):
 	kernelBank=(
 	#("Small Blurring",smallBlur),
 	#("Large Blurring",largeBlur),
+	("Sharpen",sharpen),
 	("Sobel X",sobelX),
 	("Sobel Y",sobelY),
-	("Laplacian",laplacian),
-	("Sharpen",sharpen))
+	("Laplacian",laplacian))
 	image=cv2.imread(image)
+	blur=cv2.GaussianBlur(image,(3,3),0)
+	blur=cv2.cvtColor(blur,cv2.COLOR_BGR2GRAY)
 	gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-	image=cv2.resize(image,(0,0),fx=.5,fy=.5)
+	blur=cv2.resize(blur,(0,0),fx=.5,fy=.5)
 	gray=cv2.resize(gray,(0,0),fx=.5,fy=.5)
 	cv2.imwrite('Results/Image_Analyzed.jpg',image)
-	stored_image=cv2.copyMakeBorder(image,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
+	stored_image=cv2.copyMakeBorder(blur,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
 	stored_image=cv2.putText(stored_image,"Original Image",(10,(stored_image.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
 	stored_image=cv2.rectangle(stored_image,(0,(stored_image.shape[0]-50)),(stored_image.shape[1],stored_image.shape[0]),(0,0,0),3)
 	cv2.imwrite('Results/Stored_Image.jpg',stored_image)
@@ -94,22 +96,22 @@ def run_kerneler(image):
 	for(kernelName,kernel) in kernelBank:
 		print("[INFO]Applying {} kernel".format(kernelName))
 		convolve_gray_Output=convolve(gray,kernel)
-		convolve_image_Output=convolve(image,kernel)
+		convolve_blur_Output=convolve(blur,kernel)
 		convolve_gray_Output=cv2.copyMakeBorder(convolve_gray_Output,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,0,0])
 		convolve_gray_Output=cv2.putText(convolve_gray_Output,"Filter: "+kernelName+" "+"Mode: Gray",(10,(convolve_gray_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
 		convolve_gray_Output=cv2.rectangle(convolve_gray_Output,(0,(convolve_gray_Output.shape[0]-50)),(convolve_gray_Output.shape[1],convolve_gray_Output.shape[0]),(0,0,0),3)
-		convolve_image_Output=cv2.copyMakeBorder(convolve_image_Output,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,0,0])
-		convolve_image_Output=cv2.putText(convolve_image_Output,"Filter: "+kernelName+" "+"Mode: Color",(10,(convolve_image_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
-		convolve_image_Output=cv2.rectangle(convolve_image_Output,(0,(convolve_image_Output.shape[0]-50)),(convolve_image_Output.shape[1],convolve_image_Output.shape[0]),(0,0,0),3)
+		convolve_blur_Output=cv2.copyMakeBorder(convolve_blur_Output,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,0,0])
+		convolve_blur_Output=cv2.putText(convolve_blur_Output,"Filter: "+kernelName+" "+"Mode: Color",(10,(convolve_blur_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
+		convolve_blur_Output=cv2.rectangle(convolve_blur_Output,(0,(convolve_blur_Output.shape[0]-50)),(convolve_blur_Output.shape[1],convolve_blur_Output.shape[0]),(0,0,0),3)
 		cv2.imwrite('Results/'+kernelName+"_Gray"+".jpg", convolve_gray_Output)
-		cv2.imwrite('Results/'+kernelName+"_Color"+".jpg", convolve_image_Output)
+		cv2.imwrite('Results/'+kernelName+"_Color"+".jpg", convolve_blur_Output)
 		#opencvOutput=cv2.filter2D(gray,-1,kernel)
 		#No need to call difference image here
 		#(score)=compare_ssim(convolveOutput,opencvOutput,full=True)
 		#print("[INFO]Score for {} kernel is: {:.4f}\n".format(kernelName,score[0]))
 		#cv2.imshow("original",gray)
 		cv2.imshow("{}-gray".format(kernelName),convolve_gray_Output)
-		cv2.imshow("{}-color".format(kernelName),convolve_image_Output)
+		cv2.imshow("{}-color".format(kernelName),convolve_blur_Output)
 		#cv2.imshow("{}-opencv".format(kernelName),opencvOutput)
 		cv2.waitKey(0)
 		cv2.destroyAllWindows()
