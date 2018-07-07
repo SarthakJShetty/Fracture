@@ -26,7 +26,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
-	<strong>Usage:</strong> ```python retrain.py --image_dir path/to/dataset/directory --path="project_name"```
+	<strong>Usage:</strong> ```python retrain.py --image_dir path/to/dataset/directory --path_to_files="project_name"```
 
 	<strong>Note:</strong> The ```path``` creates a new file ```project_name``` under the ```tmp``` folder, and stores retrain logs, bottlenecks, checkpoints for the project here.</strong>
 
