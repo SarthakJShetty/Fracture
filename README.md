@@ -36,7 +36,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 2. Using the webscraper, scrape images from Google Images to build your dataset.
 
-	<strong>Usage:</strong> ```python webscraper --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
+	<strong>Usage:</strong> ```python webscraper.py --search "Gears" --num_images 100 --directory /path/to/dataset/directory```
 
 	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
 
@@ -48,39 +48,35 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 	<strong>Note:</strong> The ```path_to_files``` creates a new file ```project_name``` under the ```tmp``` folder, and stores retrain logs, bottlenecks, checkpoints for the project here.</strong>
 
-4. The previous step will cause logs and graphs to be generated during the training, and will take up a generous amount of space. We require the labels, bottlenecks and output graphs generated for the ```label_image.py``` script.
+4. The previous step will cause logs and graphs to be generated during the training, and will take up a generous amount of space. We require the labels, bottlenecks and output graphs generated for the ```Labeller.py``` script.
 
-5. We can now use ```label_image.py``` to identify the whether the given component is defective or not. 
+5. We can now use ```Labeller.py``` to identify the whether the given component is defective or not. 
 
-	<strong>Usage:</strong> ```python label_image.py --graph=path/of/tmp/file/generated/output_graph.pb --labels=path/of/tmp/file/project_name/generated/labels.txt --output_layer=final_result```
+	<strong>Usage:</strong> ```python Labeller.py --graph=path/of/tmp/file/generated/output_graph.pb --labels=path/of/tmp/file/project_name/generated/labels.txt --output_layer=final_result```
 
-6. The above step triggers the ```VideoCapture()``` function, which displays the camera feed. Once the specimen is in position, press the Q button on the keyboard, the script will retain the latest frame and pass it onto the ```label_image.py``` and ```Kerneler.py``` programs.
+6. The above step triggers the ```VideoCapture()``` function, which displays the camera feed. Once the specimen is in position, press the Q button on the keyboard, the script will retain the latest frame and pass it onto the ```Labeller.py``` and ```Kerneler.py``` programs.
 
 #### Results of Kerneler:
 
 - **Laplacian Kernel:** 
-
-<p align="center">
-<img title="Laplacian Filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Laplacian_Gray.jpg"/>
-</p>
+		<p align="center">
+			<img title="Laplacian Filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Laplacian_Gray.jpg"/>
+		</p>
 
 - **Sharpen:** 	
-
-<p align="center">
-<img title="Sharpening filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sharpen_Gray.jpg"/>
-</p>
+		<p align="center">
+			<img title="Sharpening filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sharpen_Gray.jpg"/>
+		</p>
 
 - **Sobel X:** 
-
-<p align="center">
-<img title="Sobel-X filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20X_Gray.jpg"/>
-</p>
+		<p align="center">
+			<img title="Sobel-X filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20X_Gray.jpg"/>
+		</p>
 
 - **Sobel Y:** 
-
-<p align="center">
-<img title="Sobel-Y filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20Y_Gray.jpg"/>
-</p>
+		<p align="center">
+			<img title="Sobel-Y filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20Y_Gray.jpg"/>
+		</p>
 
 #### Results of TensorFlow model:
 
