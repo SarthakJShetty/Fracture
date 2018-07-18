@@ -73,38 +73,25 @@ def run_kerneler(image):
 	("Sobel X",sobelX),
 	("Sobel Y",sobelY),
 	("Laplacian",laplacian))
-	image=cv2.imread(image)
-	blur=cv2.GaussianBlur(image,(3,3),0)
-	blur=cv2.cvtColor(blur,cv2.COLOR_BGR2GRAY)
-	gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-	blur=cv2.resize(blur,(0,0),fx=.5,fy=.5)
-	gray=cv2.resize(gray,(0,0),fx=.5,fy=.5)
-	cv2.imwrite('Results/Image_Analyzed.jpg',image)
-	stored_image=cv2.copyMakeBorder(blur,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
-	stored_image=cv2.putText(stored_image,"Original Image",(10,(stored_image.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
-	stored_image=cv2.rectangle(stored_image,(0,(stored_image.shape[0]-50)),(stored_image.shape[1],stored_image.shape[0]),(0,0,0),3)
-	cv2.imwrite('Results/Stored_Image.jpg',stored_image)
-	cv2.imshow("Stored_Image",stored_image)
-	cv2.waitKey(0)
-	cv2.destroyAllWindows()
-#Adding first image here
-#image_2=cv2.resize(image_2,(0,0),fx=.5,fy=.5)
-
-#Converting image to grayscale here
-#Displaying images here
-#Cycles through all the kernels available in the bank, compares with the image
+	#Adding first image here
+	#image_2=cv2.resize(image_2,(0,0),fx=.5,fy=.5)
+	temp_image, temp_blur, gray, blur, image = pre_processing(image)
+	image_saver(temp_image,temp_blur, gray, blur, image)
+	#Converting image to gray-scale here
+	#Displaying images here
+	#Cycles through all the kernels available in the bank, compares with the image
 	for(kernelName,kernel) in kernelBank:
 		print("[INFO]Applying {} kernel".format(kernelName))
 		convolve_gray_Output=convolve(gray,kernel)
 		convolve_blur_Output=convolve(blur,kernel)
 		convolve_gray_Output=cv2.copyMakeBorder(convolve_gray_Output,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,0,0])
-		convolve_gray_Output=cv2.putText(convolve_gray_Output,"Filter: "+kernelName+" "+"Mode: Gray",(10,(convolve_gray_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
+		convolve_gray_Output=cv2.putText(convolve_gray_Output,"Filter: "+kernelName+" "+"Mode: Gray",(10,(convolve_gray_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.35, (100,100,100),1,cv2.LINE_AA)
 		convolve_gray_Output=cv2.rectangle(convolve_gray_Output,(0,(convolve_gray_Output.shape[0]-50)),(convolve_gray_Output.shape[1],convolve_gray_Output.shape[0]),(0,0,0),3)
 		convolve_blur_Output=cv2.copyMakeBorder(convolve_blur_Output,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,0,0])
-		convolve_blur_Output=cv2.putText(convolve_blur_Output,"Filter: "+kernelName+" "+"Mode: Color",(10,(convolve_blur_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.5, (100,100,100),1,cv2.LINE_AA)
+		convolve_blur_Output=cv2.putText(convolve_blur_Output,"Filter: "+kernelName+" "+"Mode: Blur",(10,(convolve_blur_Output.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.35, (100,100,100),1,cv2.LINE_AA)
 		convolve_blur_Output=cv2.rectangle(convolve_blur_Output,(0,(convolve_blur_Output.shape[0]-50)),(convolve_blur_Output.shape[1],convolve_blur_Output.shape[0]),(0,0,0),3)
 		cv2.imwrite('Results/'+kernelName+"_Gray"+".jpg", convolve_gray_Output)
-		cv2.imwrite('Results/'+kernelName+"_Color"+".jpg", convolve_blur_Output)
+		cv2.imwrite('Results/'+kernelName+"_Blur"+".jpg", convolve_blur_Output)
 		#opencvOutput=cv2.filter2D(gray,-1,kernel)
 		#No need to call difference image here
 		#(score)=compare_ssim(convolveOutput,opencvOutput,full=True)
@@ -115,3 +102,70 @@ def run_kerneler(image):
 		#cv2.imshow("{}-opencv".format(kernelName),opencvOutput)
 		cv2.waitKey(0)
 		cv2.destroyAllWindows()
+
+#Defining a seperate function, to prepare the image for processing
+def pre_processing(image):
+	
+	#Reading the image here, from the file name provided to the Labeller.py script
+	image=cv2.imread(image)
+	
+	#Applying Gaussian blur to the image, to reduce the noise, as detailed in the paper
+	blur=cv2.GaussianBlur(image,(13,13),0)
+	
+	#Scaling down both the grayed image and the blurred image
+	blur=cv2.resize(blur,(0,0),fx=.5,fy=.5)
+	gray=cv2.resize(image,(0,0),fx=.5,fy=.5)
+
+	#Formatting the image from here on out to make it more presentable
+	#Adding a border to the gray image here
+	temp_image=cv2.copyMakeBorder(gray,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
+	
+	#Adding a line of text, for labeling samples while presenting
+	temp_image=cv2.putText(temp_image,"Original Image",(10,(temp_image.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.35, (100,100,100),1,cv2.LINE_AA)
+	
+	#Adding a border to the text box
+	temp_image=cv2.rectangle(temp_image,(0,(temp_image.shape[0]-50)),(temp_image.shape[1],temp_image.shape[0]),(0,0,0),3)
+	
+	#Adding a border to the blur image here
+	temp_blur=cv2.copyMakeBorder(blur,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
+	
+	#Adding text to the blur image here
+	temp_blur=cv2.putText(temp_blur,"Blurred Image",(10,(temp_blur.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.35, (100,100,100),1,cv2.LINE_AA)
+	
+	#Adding a border around text of the blur image
+	temp_blur=cv2.rectangle(temp_blur,(0,(temp_blur.shape[0]-50)),(temp_blur.shape[1],temp_blur.shape[0]),(0,0,0),3)
+	#Ending of adding borders and text overlay on the image. Primary to make the stored images look better on the publication
+	return temp_image, temp_blur, gray, blur, image
+
+#Function to handle all the file operations, saving, converting image to B/W
+def image_saver(temp_image, temp_blur, gray, blur, image):
+
+	#Displaying the regular image here
+	cv2.imshow("Normal Image", temp_image)
+	
+	#Displaying the Gaussian blur image here for side by side comparison
+	cv2.imshow("Gaussian Blur Image", temp_blur)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
+
+	#Writing the images to disk, for retrieval later
+	cv2.imwrite("Results/Blurred_Image.jpg",temp_blur)
+	cv2.imwrite("Results/Normal_Image.jpg",temp_image)
+
+	#Converting to B/W before processing
+	blur=cv2.cvtColor(blur,cv2.COLOR_BGR2GRAY)
+	gray=cv2.cvtColor(gray,cv2.COLOR_BGR2GRAY)
+	
+	#Storing the image here
+	cv2.imwrite('Results/Image_Analyzed.jpg',image)
+	
+	#Adding border, text and border for text-box.
+	stored_image=cv2.copyMakeBorder(blur,0,50,0,0,cv2.BORDER_CONSTANT,value=[255,255,255])
+	stored_image=cv2.putText(stored_image,"Image Analyzed",(10,(stored_image.shape[0]-20)),cv2.FONT_HERSHEY_SIMPLEX,0.35, (100,100,100),1,cv2.LINE_AA)
+	stored_image=cv2.rectangle(stored_image,(0,(stored_image.shape[0]-50)),(stored_image.shape[1],stored_image.shape[0]),(0,0,0),3)
+	cv2.imwrite('Results/Stored_Image.jpg',stored_image)
+	cv2.imshow("Stored_Image",stored_image)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
+
+	return blur, gray
