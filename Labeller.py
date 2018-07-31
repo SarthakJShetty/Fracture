@@ -22,7 +22,7 @@ import numpy as np
 import tensorflow as tf
 import cv2
 import os
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 def load_graph(model_file):
   graph = tf.Graph()
   graph_def = tf.GraphDef()
@@ -93,7 +93,7 @@ if __name__ == "__main__":
   parser.add_argument("--input_mean", type=int, help="input mean")
   parser.add_argument("--input_std", type=int, help="input std")
   parser.add_argument("--input_layer", help="name of input layer")
-  parser.add_argument("--output_layer", help="name of output layer")
+  parser.add_argument("--output_layer", default="final_result", help="name of output layer")
   args = parser.parse_args()
 
   if args.image:
@@ -118,7 +118,6 @@ if __name__ == "__main__":
 
   #if args.color_setting:
     #print("[INFO] Color Setting Parsing")
-    color_mode=args.color_setting
   if args.graph:
     model_file = args.graph
   if args.image:
