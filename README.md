@@ -3,12 +3,19 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 ### :warning: Code is buggy :warning:
 
-### Introduction
+### Introduction:
 - This project aims to develop a tool for identifying fractures and fissures in a mechanical component.
 
 - The tool makes use of OpenCV and TensorFlow. OpenCV is used to visually detect the presence of the fracture and TensorFlow is used to predict the presence of fractures.
 
 	 <strong>Note:</strong> Most of the TensorFlow code has been pulled from the TensorFlow repository sans a few changes.
+
+### Overview of model:
+<p align="center">
+	<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/Pipeline_Overview_PNG.png" title="Outline of model">
+	<figcaption><em>Fig 1. Block diagram of pipeline</em>
+	</figcaption>
+</p>
 
 ### Working:
 1. A image is sent to the OpenCV code which runs it through a series of "Kernels", which include:
@@ -61,21 +68,33 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 - **Laplacian Kernel:** 
 		<p align="center">
 			<img title="Laplacian Filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Laplacian_Gray.jpg"/>
+			<figcaption>
+				<em>Fig 2. Result of Laplacian Kernel</em>
+			</figcaption>
 		</p>
 
 - **Sharpen:** 	
 		<p align="center">
 			<img title="Sharpening filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sharpen_Gray.jpg"/>
+			<figcaption>
+				<em>Fig 3. Result of Sharpening Kernel</em>
+			</figcaption>
 		</p>
 
 - **Sobel X:** 
 		<p align="center">
 			<img title="Sobel-X filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20X_Gray.jpg"/>
+			<figcaption>
+			<em>Fig 4. Result of Sobel-X Kernel</em>
+			</figcaption>
 		</p>
 
 - **Sobel Y:** 
 		<p align="center">
 			<img title="Sobel-Y filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20Y_Gray.jpg"/>
+			<figcaption>
+			<em>Fig 5. Result of Sobel-Y Kernel</em>
+			</figcaption>
 		</p>
 
 #### Results of TensorFlow model:
@@ -83,19 +102,31 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 - **Train accuracy:**
 		<p align="center">
 			<img title="Training accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingAccuracy_vs_Steps.png">
+			<figcaption>
+			<em>Fig 6. Training Accuracy vs Steps</em>
+			</figcaption>
 		</p>
 
 - **Validation accuracy:**
 		<p align="center">
 			<img title="Validation accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationAccuracy_vs_Steps.png">
+			<figcaption>
+			<em>Fig 7. Validation Accuracy vs Steps</em>
+			</figcaption>
 		</p>
 
 - **Cross-entropy (Training):**
 		<p align="center">
 			<img title="Cross-entropy during training" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingEntropy_vs_Steps.png">
+			<figcaption>
+			<em>Fig 8. Training Entropy vs Steps</em>
+			</figcaption>
 		</p>
 
 - **Cross-entropy (Validation):**
 		<p align="center">
 			<img title="Cross-entropy during validation" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationEntropy_vs_Steps.png">
+			<figcaption>
+			<em>Fig 9. Validation Entropy vs Steps</em>
+			</figcaption>
 		</p>
