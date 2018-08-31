@@ -1,3 +1,4 @@
+
 # Fracture-Detection
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
@@ -99,11 +100,36 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 #### Results of TensorFlow model:
 
+- **<a title="Result 1" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_1.png">Prediction 1:</a>**
+		<p align="center">
+			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_1.png">
+			<figcaption>
+			<em>Fig 6. Prediction 1 made by model</em>
+			</figcaption>
+		</p>
+
+- **<a title="Result 2" href="">Prediction 2:</a>**
+		<p align="center">
+			<img title="Prediction 2" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_2.png">
+			<figcaption>
+			<em>Fig 7. Prediction 2 made by model</em>
+			</figcaption>
+		</p>
+
+- **<a title="Result 3" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_3.png">Prediction 3:</a>**
+		<p align="center">
+			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_3.png">
+			<figcaption>
+			<em>Fig 8. Prediction 3 made by model</em>
+			</figcaption>
+		</p>
+
+
 - **Train accuracy:**
 		<p align="center">
 			<img title="Training accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingAccuracy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 6. Training Accuracy vs Steps</em>
+			<em>Fig 9. Training Accuracy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -111,7 +137,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Validation accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationAccuracy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 7. Validation Accuracy vs Steps</em>
+			<em>Fig 10. Validation Accuracy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -119,7 +145,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Cross-entropy during training" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingEntropy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 8. Training Entropy vs Steps</em>
+			<em>Fig 11. Training Entropy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -127,6 +153,6 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Cross-entropy during validation" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationEntropy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 9. Validation Entropy vs Steps</em>
+			<em>Fig 12. Validation Entropy vs Steps</em>
 			</figcaption>
 		</p>
