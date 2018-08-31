@@ -1,4 +1,5 @@
 
+
 # Fracture-Detection
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
@@ -100,7 +101,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 #### Results of TensorFlow model:
 
-- **<a title="Result 1" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_1.png">Prediction 1:</a>**
+- **<a title="Result 1" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/			Predictions_Terminal_1.png">Prediction 1:</a>**
 		<p align="center">
 			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_1.png">
 			<figcaption>
@@ -115,15 +116,6 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 			<em>Fig 7. Prediction 2 made by model</em>
 			</figcaption>
 		</p>
-
-- **<a title="Result 3" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_3.png">Prediction 3:</a>**
-		<p align="center">
-			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_3.png">
-			<figcaption>
-			<em>Fig 8. Prediction 3 made by model</em>
-			</figcaption>
-		</p>
-
 
 - **Train accuracy:**
 		<p align="center">
