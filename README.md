@@ -1,5 +1,3 @@
-
-
 # Fracture-Detection
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
@@ -121,7 +119,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Training accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingAccuracy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 9. Training Accuracy vs Steps</em>
+			<em>Fig 8. Training Accuracy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -129,7 +127,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Validation accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationAccuracy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 10. Validation Accuracy vs Steps</em>
+			<em>Fig 9. Validation Accuracy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -137,7 +135,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Cross-entropy during training" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingEntropy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 11. Training Entropy vs Steps</em>
+			<em>Fig 10. Training Entropy vs Steps</em>
 			</figcaption>
 		</p>
 
@@ -145,6 +143,6 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 		<p align="center">
 			<img title="Cross-entropy during validation" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationEntropy_vs_Steps.png">
 			<figcaption>
-			<em>Fig 12. Validation Entropy vs Steps</em>
+			<em>Fig 11. Validation Entropy vs Steps</em>
 			</figcaption>
 		</p>
