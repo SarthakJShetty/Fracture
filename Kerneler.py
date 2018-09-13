@@ -1,3 +1,12 @@
+'''Hello!
+This script is part of the bigger Fracture project, which attempts to predict and classify defective components,
+relying solely on computer-vision and machine-learning techniques.
+
+Check out the README.md for a more detailed explanation of the project.
+
+Sarthak J Shetty
+13/09/2018'''
+
 from skimage.exposure import rescale_intensity
 import numpy as np
 from skimage.measure import compare_ssim
