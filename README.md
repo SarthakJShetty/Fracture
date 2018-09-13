@@ -1,4 +1,4 @@
-# Fracture-Detection
+# Fracture
 Building a Computer Vision based tool for detecting fractures and fatiguing in mechanical components.
 
 ### :warning: Code is buggy :warning:
@@ -12,7 +12,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 ### Overview of model:
 <p align="center">
-	<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/Pipeline_Overview_PNG.png" title="Outline of model">
+	<img src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Data/Pipeline_Overview_PNG.png" title="Outline of model">
 	<figcaption><em>Fig 1. Block diagram of pipeline</em>
 	</figcaption>
 </p>
@@ -29,9 +29,9 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 2. The OpenCV code serves as a detector for fractures and relays it to the operator.
 
-3. The image is then passed to the label_image.py [script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/label_image.py), which predicts whether the object is classified as fractured or not.
+3. The image is then passed to the label_image.py [script](https://github.com/SarthakJShetty/Fracture/blob/master/label_image.py), which predicts whether the object is classified as fractured or not.
 
-4. A retrain.py [script](https://github.com/SarthakJShetty/Fracture-Detection/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
+4. A retrain.py [script](https://github.com/SarthakJShetty/Fracture/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
 
 5. A webscraper has been developed which scrapes Google Images for the images to build your dataset (yet to be developed).
 
@@ -39,7 +39,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 1. Clone the repository:
 
-	```git clone https://github.com/SarthakJShetty/Fracture-Detection.git```
+	```git clone https://github.com/SarthakJShetty/Fracture.git```
 
 2. Using the webscraper, scrape images from Google Images to build your dataset.
 
@@ -47,7 +47,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 	<strong>Note:</strong> Make sure that both categories of images are in a common directory.
 
-	<strong>Credits: This <a title="Webscraper" href="https://github.com/SarthakJShetty/Fracture-Detection/blob/master/webscraper.py">webscraper</a> was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
+	<strong>Credits: This <a title="Webscraper" href="https://github.com/SarthakJShetty/Fracture/blob/master/webscraper.py">webscraper</a> was written by <a title="genekogan" href="http://genekogan.com/" target="_blank">genekogan</a>. All credits to him for developing the scrapper.</strong>
 
 3. Retrain the final layers of Inception V3, to identify the images in the new dataset.
 
@@ -67,7 +67,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Laplacian Kernel:** 
 		<p align="center">
-			<img title="Laplacian Filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Laplacian_Gray.jpg"/>
+			<img title="Laplacian Filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Laplacian_Gray.jpg"/>
 			<figcaption>
 				<em>Fig 2. Result of Laplacian Kernel</em>
 			</figcaption>
@@ -75,7 +75,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Sharpen:** 	
 		<p align="center">
-			<img title="Sharpening filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sharpen_Gray.jpg"/>
+			<img title="Sharpening filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Sharpen_Gray.jpg"/>
 			<figcaption>
 				<em>Fig 3. Result of Sharpening Kernel</em>
 			</figcaption>
@@ -83,7 +83,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Sobel X:** 
 		<p align="center">
-			<img title="Sobel-X filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20X_Gray.jpg"/>
+			<img title="Sobel-X filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Sobel%20X_Gray.jpg"/>
 			<figcaption>
 			<em>Fig 4. Result of Sobel-X Kernel</em>
 			</figcaption>
@@ -91,7 +91,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Sobel Y:** 
 		<p align="center">
-			<img title="Sobel-Y filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Sobel%20Y_Gray.jpg"/>
+			<img title="Sobel-Y filter" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Sobel%20Y_Gray.jpg"/>
 			<figcaption>
 			<em>Fig 5. Result of Sobel-Y Kernel</em>
 			</figcaption>
@@ -99,9 +99,9 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 #### Results of TensorFlow model:
 
-- **<a title="Result 1" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/			Predictions_Terminal_1.png">Prediction 1:</a>**
+- **<a title="Result 1" href="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Predictions_Terminal_1.png">Prediction 1:</a>**
 		<p align="center">
-			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_1.png">
+			<img title="Prediction 1" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Predictions_Terminal_1.png">
 			<figcaption>
 			<em>Fig 6. Prediction 1 made by model</em>
 			</figcaption>
@@ -109,7 +109,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **<a title="Result 2" href="">Prediction 2:</a>**
 		<p align="center">
-			<img title="Prediction 2" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Results/Predictions_Terminal_2.png">
+			<img title="Prediction 2" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Results/Predictions_Terminal_2.png">
 			<figcaption>
 			<em>Fig 7. Prediction 2 made by model</em>
 			</figcaption>
@@ -117,7 +117,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Train accuracy:**
 		<p align="center">
-			<img title="Training accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingAccuracy_vs_Steps.png">
+			<img title="Training accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Data/TrainingAccuracy_vs_Steps.png">
 			<figcaption>
 			<em>Fig 8. Training Accuracy vs Steps</em>
 			</figcaption>
@@ -125,7 +125,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Validation accuracy:**
 		<p align="center">
-			<img title="Validation accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationAccuracy_vs_Steps.png">
+			<img title="Validation accuracy" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Data/ValidationAccuracy_vs_Steps.png">
 			<figcaption>
 			<em>Fig 9. Validation Accuracy vs Steps</em>
 			</figcaption>
@@ -133,7 +133,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Cross-entropy (Training):**
 		<p align="center">
-			<img title="Cross-entropy during training" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/TrainingEntropy_vs_Steps.png">
+			<img title="Cross-entropy during training" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Data/TrainingEntropy_vs_Steps.png">
 			<figcaption>
 			<em>Fig 10. Training Entropy vs Steps</em>
 			</figcaption>
@@ -141,7 +141,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 - **Cross-entropy (Validation):**
 		<p align="center">
-			<img title="Cross-entropy during validation" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture-Detection/master/Data/ValidationEntropy_vs_Steps.png">
+			<img title="Cross-entropy during validation" src="https://raw.githubusercontent.com/SarthakJShetty/Fracture/master/Data/ValidationEntropy_vs_Steps.png">
 			<figcaption>
 			<em>Fig 11. Validation Entropy vs Steps</em>
 			</figcaption>
