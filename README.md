@@ -29,9 +29,9 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 2. The OpenCV code serves as a detector for fractures and relays it to the operator.
 
-3. The image is then passed to the label_image.py [script](https://github.com/SarthakJShetty/Fracture/blob/master/label_image.py), which predicts whether the object is classified as fractured or not.
+3. The image is then passed to the ```label_image.py``` [script](https://github.com/SarthakJShetty/Fracture/blob/master/label_image.py), which predicts whether the object is classified as fractured or not.
 
-4. A retrain.py [script](https://github.com/SarthakJShetty/Fracture/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
+4. A ```retrain.py``` [script](https://github.com/SarthakJShetty/Fracture/blob/master/retrain.py) code is provided which is trained on the dataset of images. 
 
 5. A webscraper has been developed which scrapes Google Images for the images to build your dataset (yet to be developed).
 
