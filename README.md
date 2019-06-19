@@ -10,7 +10,7 @@ Building a Computer Vision based tool for detecting fractures and fatiguing in m
 
 	 <strong>Note:</strong> Most of the TensorFlow code has been pulled from the TensorFlow repository sans a few changes.
 
-- Paper on the approach & results presented at the <a title="A2IC" href="https://premc.org/conferences/a2ic-artificial-intelligence/" target="_blank">Artificial Intelligence International Conference</a> in Barcelona is available on arXiv <a title="arXiv link to paper" href="https://arxiv.org/abs/1901.08864" target="_blank">here</a>!.
+- Paper on the approach & results presented at the <a title="A2IC" href="https://premc.org/conferences/a2ic-artificial-intelligence/" target="_blank">Artificial Intelligence International Conference</a> in Barcelona is available on arXiv <a title="arXiv link to paper" href="https://arxiv.org/abs/1901.08864" target="_blank">here</a>!
 
 ### Overview of model:
 <p align="center">
